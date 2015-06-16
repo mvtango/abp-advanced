@@ -9,3 +9,11 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/landing-page.js"></script>
+
+<!-- Inline Markdown -->
+<script src="{{ page.rel }}js/marked.min.js"></script>
+
+<script type="text/javascript">
+$('script[type="text/markdown"]').each(function()  { $t=$(this); c=$t.html(); $t.replaceWith("<div>"+marked(c)+"<!-- "+c+"--></div>"); })
+
+</script>
